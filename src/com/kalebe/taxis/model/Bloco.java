@@ -1,38 +1,57 @@
 package com.kalebe.taxis.model;
 
 import java.time.LocalTime;
+import java.util.ArrayList;
 
 public class Bloco {
-    private String nome;
-    private Atributo atributo;
+    private String acao;
+    private ArrayList<Atributo> atributo;
+    private Habito habito;
     private LocalTime horasInicio;
     private LocalTime horasFinal;
     private String diaDaSemana;
     private String descricao;
 
-    public Bloco(String nome, Atributo atributo,LocalTime horasInicio,LocalTime horasFinal,String diaDaSemana,String descricao){
-        this.nome = nome;
+    public Bloco(String acao,ArrayList<Atributo> atributo,Habito habito, LocalTime horasInicio,LocalTime horasFinal,String diaDaSemana,String descricao){
+        this.acao = acao;
         this.atributo = atributo;
+        this.habito = habito;
         this.horasInicio = horasInicio;
         this.horasFinal = horasFinal;
         this.diaDaSemana = diaDaSemana;
         this.descricao = descricao;
     }
 
-    public String getNome(){
-        return this.nome;
+    public Bloco(String acao,LocalTime horasInicio,LocalTime horasFinal,String diaDaSemana){
+        this.acao = acao;
+        this.horasInicio = horasInicio;
+        this.horasFinal = horasFinal;
+        this.diaDaSemana = diaDaSemana;
     }
 
-    public void setNome(String nome){
-        this.nome = nome;
+    public String getAcao(){
+        return this.acao;
     }
 
-    public Atributo getAtributo() {
+    public void setAcao(String acao){
+        this.acao = acao;
+    }
+
+    public ArrayList<Atributo> getAtributo() {
         return atributo;
     }
 
-    public void setAtributo(Atributo atributo) {
+    public void setAtributo(ArrayList<Atributo> atributo) {
         this.atributo = atributo;
+    }
+
+    public Habito getHabito(){
+        return this.habito;
+
+    }
+
+    public void setHabito(Habito habito){
+        this.habito = habito;
     }
 
         public LocalTime getHorasInicio() {
